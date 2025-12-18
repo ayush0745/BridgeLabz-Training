@@ -6,6 +6,6 @@ public class AverageOfPcm {
         int chemistry = 96;
         int mathematics = 94;
         double average = (physics + chemistry + mathematics) / 3.0;
-        System.out.println("The average marks for pcm is " + average);
+        System.out.println("Sam’s average mark in PCM is " + average);
     }
 }
