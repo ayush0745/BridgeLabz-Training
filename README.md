@@ -1,4 +1,5 @@
 ﻿# BridgeLabz-Training
+### Week 1: Getting Started with basic problem solving using java
 ### 16-12-2025 (Tuesday):
 - Established the foundational project structure by creating the repository and adding the local folder.
 
@@ -11,5 +12,6 @@
 ### 19-12-2025 (Friday):
 - Solved specific LeetCode challenges, including Ugly Number and Reverse Integer, and completed various control flow problems.
   
+
 
 
