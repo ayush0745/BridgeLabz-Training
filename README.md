@@ -1,17 +1,15 @@
 ﻿# BridgeLabz-Training
-### 16-12-2025
-- Created repo 
-- Added folder locally
+### 16-12-2025 (Tuesday):
+- Established the foundational project structure by creating the repository and adding the local folder.
 
-### 17-12-2025
-- completed gcr questions
+### 17-12-2025 (Wednesday):
+- Successfully completed GCR (Google Classroom) questions.
 
-### 18-12-2025
-- completed level 1 gcr problems
-- completed level 2 gcr problems
-- completed 2 leetcode problems
-### 19-12-2025
-- completed leetcode problems ugly number and reverse integer
-- 
+### 18-12-2025 (Thursday):
+- Finished both Level 1 and Level 2 GCR problems and completed 2 LeetCode problems.
+
+### 19-12-2025 (Friday):
+- Solved specific LeetCode challenges, including Ugly Number and Reverse Integer, and completed various control flow problems.
   
+
 
