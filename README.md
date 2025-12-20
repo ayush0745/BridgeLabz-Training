@@ -1,4 +1,23 @@
-﻿# BridgeLabz-Training
+# Current Structure of Git Hub
+
+BridgeLabz-Training/
+|
++-- core-java-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- programming-elements/
+|   |   |
+|   |   +-- control-flow/
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- README.md
+ 
+  
+ # BridgeLabz-Training
 ### Week 1: Getting Started with basic problem solving using java
 ### 16-12-2025 (Tuesday):
 - Established the foundational project structure by creating the repository and adding the local folder.
@@ -16,6 +35,7 @@
 - Solved control flow level 3 problems
 - Solved leetcode add Digits (https://leetcode.com/problems/add-digits/) and palindrome number (https://leetcode.com/problems/palindrome-number/)
   
+
 
 
 
