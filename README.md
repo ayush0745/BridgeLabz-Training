@@ -9,6 +9,8 @@ BridgeLabz-Training/
 |   |   +-- programming-elements/
 |   |   |
 |   |   +-- control-flow/
+|   |   |
+|   |   +-- arrays/
 |   |
 |   +-- leet-code-codebase/
 |   |
@@ -37,6 +39,7 @@ BridgeLabz-Training/
 - Solved two scnarario based problem incuding CoffeeCounter and FitnessTracker
 - Solved arrays level 1 and level 2 problems ( 1D Arrays and 2D Arrays )
   
+
 
 
 
