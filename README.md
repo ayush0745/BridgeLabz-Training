@@ -9,6 +9,8 @@ BridgeLabz-Training/
 |   |   +-- programming-elements/
 |   |   |
 |   |   +-- control-flow/
+|   |   |
+|   |   +-- arrays/
 |   |
 |   +-- leet-code-codebase/
 |   |
@@ -34,7 +36,11 @@ BridgeLabz-Training/
 ### 20-12-2025 (Saturday):
 - Solved control flow level 3 problems
 - Solved leetcode add Digits (https://leetcode.com/problems/add-digits/) and palindrome number (https://leetcode.com/problems/palindrome-number/)
+- Solved two scnarario based problem incuding CoffeeCounter and FitnessTracker
+- Solved arrays level 1 and level 2 problems ( 1D Arrays and 2D Arrays )
   
+
+
 
 
 
