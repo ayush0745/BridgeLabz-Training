@@ -1,5 +1,5 @@
 # Current Structure of Git Hub
-
+```
 BridgeLabz-Training/
 |
 +-- core-java-practice/(Branch & Folder Name)
@@ -15,7 +15,7 @@ BridgeLabz-Training/
 |   +-- scenario-based/
 |
 +-- README.md
- 
+ ```
   
  # BridgeLabz-Training
 ### Week 1: Getting Started with basic problem solving using java
@@ -35,6 +35,7 @@ BridgeLabz-Training/
 - Solved control flow level 3 problems
 - Solved leetcode add Digits (https://leetcode.com/problems/add-digits/) and palindrome number (https://leetcode.com/problems/palindrome-number/)
   
+
 
 
 
