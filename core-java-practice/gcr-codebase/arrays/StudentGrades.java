@@ -56,13 +56,15 @@ public class StudentGrades {
             }
         }
 
-        // display final table
-       
-        System.out.printf("%-10s %-8s %-8s %-8s %-12s %-5s\n", "Student", "Phys", "Chem", "Math", "Percentage", "Grade");
-        
+        System.out.println("output")
         for (int i = 0; i < num; i++) {
-            System.out.printf("%-10d %-8.1f %-8.1f %-8.1f %-12.2f %-5s\n", 
-                (i + 1), marks[i][0], marks[i][1], marks[i][2], percentages[i], grades[i]);
+            
+            System.out.println((i + 1) + " , " + 
+                               marks[i][0] + " , " + 
+                               marks[i][1] + " , " + 
+                               marks[i][2] + " , " + 
+                               percentages[i] + " , " + 
+                               grades[i]);
         }
 
         scanner.close();

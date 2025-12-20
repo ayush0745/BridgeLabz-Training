@@ -51,14 +51,16 @@ public class BMITwoD{
 
      // display results 
        
-        System.out.printf("%-10s %-10s %-10s %-8s %-15s\n", "ID", "Weight", "Height", "BMI", "Status");
-        
         for (int i = 0; i < num; i++) {
-           
-            System.out.printf("%-10d %-10.2f %-10.2f %-8.2f %-15s\n", 
-                (i + 1), personData[i][0], personData[i][1], personData[i][2], weightStatus[i]);
-        }
+            int id = i + 1;
+            double weight = personData[i][0];
+            double height = personData[i][1];
+            double bmi = personData[i][2];
+            String status = weightStatus[i];
 
+           
+            System.out.println("Person #" + id + ": BMI = " + bmi + " (" + status + ")");
+        }
         scanner.close();
     }
 }

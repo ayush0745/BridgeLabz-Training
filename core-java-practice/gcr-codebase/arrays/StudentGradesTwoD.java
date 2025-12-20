@@ -54,13 +54,16 @@ public class StudentGradesTwoD {
         }
 
         // output results 
-        System.out.println("Results");
-        System.out.printf("%-10s %-8s %-8s %-8s %-12s %-6s\n", "Student", "Phys", "Chem", "Math", "Percent", "Grade");
+        System.out.println("Results:");
 
         for (int i = 0; i < num; i++) {
-           
-            System.out.printf("%-10d %-8.1f %-8.1f %-8.1f %-12.2f %-6s\n", 
-                (i + 1), subjectMarks[i][0], subjectMarks[i][1], subjectMarks[i][2], percentages[i], grades[i]);
+          
+            System.out.println("Student " + (i + 1) + " " + 
+                               subjectMarks[i][0] + " " + 
+                               subjectMarks[i][1] + " " + 
+                               subjectMarks[i][2] + " " + 
+                               percentages[i] + "% " + 
+                               grades[i]);
         }
 
         scanner.close();
