@@ -11,7 +11,12 @@
 
 ### 19-12-2025 (Friday):
 - Solved specific LeetCode challenges, including Ugly Number and Reverse Integer, and completed various control flow problems.
+
+### 20-12-2025 (Saturday):
+- Solved control flow level 3 problems
+- Solved leetcode add Digits (https://leetcode.com/problems/add-digits/) and palindrome number (https://leetcode.com/problems/palindrome-number/)
   
+
 
 
 
