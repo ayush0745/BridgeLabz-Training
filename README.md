@@ -40,7 +40,8 @@ BridgeLabz-Training/
 - Solved arrays level 1 and level 2 problems ( 1D Arrays and 2D Arrays )
 
 ### 21-12-2025 (Sunday):
--solved two leetcode problems including NimGame(https://leetcode.com/problems/nim-game/) and Excel Sheet Column Number(https://leetcode.com/problems/excel-sheet-column-number/)
+- solved two leetcode problems including NimGame(https://leetcode.com/problems/nim-game/) and Excel Sheet Column Number(https://leetcode.com/problems/excel-sheet-column-number/)
+
 
 
 
