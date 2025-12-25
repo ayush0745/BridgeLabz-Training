@@ -13,7 +13,7 @@ public class Palindrome {
         sc.close();
     }
 
-    // Logic 1: Use a simple while loop
+    
     public static boolean isPalindromeLoop(String s) {
         int start = 0, end = s.length() - 1;
         while (start < end) {
@@ -22,14 +22,14 @@ public class Palindrome {
         return true;
     }
 
-    // Logic 2: Use recursion (calls itself)
+    //  Use recursion 
     public static boolean isPalindromeRec(String s, int start, int end) {
         if (start >= end) return true;
         if (s.charAt(start) != s.charAt(end)) return false;
         return isPalindromeRec(s, start + 1, end - 1);
     }
 
-    // Logic 3: Reverse the text and compare
+    // Reverse the text and compare
     public static boolean isPalindromeReverse(String s) {
         String reverse = "";
         for (int i = s.length() - 1; i >= 0; i--) {

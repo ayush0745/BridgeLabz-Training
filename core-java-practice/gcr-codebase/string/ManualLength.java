@@ -6,10 +6,10 @@ public class ManualLength {
         System.out.print("Enter a word: ");
         String text = sc.next();
 
-        // 1. Manual Length
+        // Manual Length
         int customLen = getLengthManually(text);
         
-        // 2. Built-in Length
+        //  Built-in Length
         int builtInLen = text.length();
 
         System.out.println("Custom length calculation: " + customLen);

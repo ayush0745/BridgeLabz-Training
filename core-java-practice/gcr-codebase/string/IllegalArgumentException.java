@@ -6,15 +6,14 @@ public class IllegalArgumentException {
         System.out.print("Enter a word: ");
         String text = sc.next();
 
-        // 1. Generate the crash
-        // generateArgException(text); // Uncomment this to see the crash
-
-        // 2. Handle the crash
+        
+       
+        // Handle the crash
         handleArgException(text);
     }
 
     public static void generateArgException(String text) {
-        // Logically impossible: start at 5 and end at 2
+       
         System.out.println(text.substring(5, 2));
     }
 

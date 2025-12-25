@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Calendar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter month (1-12) and year (e.g., 07 2005): ");
+        System.out.print("Enter month  and year : ");
         int month = sc.nextInt();
         int year = sc.nextInt();
 
@@ -29,7 +29,7 @@ public class Calendar {
         return days[m];
     }
 
-    // Gregorian algorithm for the first day (0=Sun, 1=Mon... 6=Sat)
+    // Gregorian algorithm 
     public static int getFirstDay(int m, int y) {
         int d = 1;
         int y0 = y - (14 - m) / 12;
@@ -46,16 +46,16 @@ public class Calendar {
         System.out.println("    " + monthName + " " + y);
         System.out.println(" S  M  T  W  T  F  S");
 
-        // First loop for indentation
+     
         for (int i = 0; i < firstDay; i++) {
             System.out.print("   ");
         }
 
-        // Second loop for days
+       
         for (int day = 1; day <= daysInMonth; day++) {
-            System.out.printf("%2d ", day); // Use width for right-justified numbers
+            System.out.printf("%2d ", day);
             
-            // Move to next line after Saturday
+          
             if (((day + firstDay) % 7 == 0) || (day == daysInMonth)) {
                 System.out.println();
             }

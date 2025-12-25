@@ -7,13 +7,13 @@ public class StudentVoting {
         System.out.print("Enter the number of students: ");
         int n = sc.nextInt();
 
-        // 1. Generate Ages
+       
         int[] ages = generateAges(n);
 
-        // 2. Process Eligibility
+       
         String[][] report = checkEligibility(ages);
 
-        // 3. Display
+        // Display
         displayTable(report);
     }
 
@@ -22,19 +22,19 @@ public class StudentVoting {
         int[] ages = new int[n];
         Random rand = new Random();
         for (int i = 0; i < n; i++) {
-            ages[i] = rand.nextInt(90) + 1; // Random age 1-90
+            ages[i] = rand.nextInt(90) + 1;
         }
         return ages;
     }
 
-    // Evaluates age and stores in 2D array
+
     public static String[][] checkEligibility(int[] ages) {
         String[][] report = new String[ages.length][2];
         for (int i = 0; i < ages.length; i++) {
             report[i][0] = String.valueOf(ages[i]);
             
             if (ages[i] < 0) {
-                report[i][1] = "false (Invalid)";
+                report[i][1] = "false";
             } else if (ages[i] >= 18) {
                 report[i][1] = "true";
             } else {

@@ -7,22 +7,22 @@ public class GradingSystem {
         System.out.print("Enter the number of students: ");
         int numStudents = sc.nextInt();
 
-        // 1. Generate scores
+        // Generate scores
         int[][] pcmScores = generateRandomScores(numStudents);
 
-        // 2. Calculate metrics
+        // Calculate metrics
         double[][] stats = calculateStats(pcmScores);
 
-        // 3. Determine grades
+        // Determine grades
         String[][] grades = determineGrades(stats);
 
-        // 4. Display scorecard
+        //Display scorecard
         displayScorecard(pcmScores, stats, grades);
         
         sc.close();
     }
 
-    // Method to generate random 2-digit scores (10-99)
+    
     public static int[][] generateRandomScores(int n) {
         Random rand = new Random();
         int[][] scores = new int[n][3];
@@ -43,31 +43,30 @@ public class GradingSystem {
             double perc = (total / 300.0) * 100.0;
 
             results[i][0] = total;
-            results[i][1] = Math.round(avg * 100.0) / 100.0; // Round to 2 digits
-            results[i][2] = Math.round(perc * 100.0) / 100.0; // Round to 2 digits
+            results[i][1] = Math.round(avg * 100.0) / 100.0; 
+            results[i][2] = Math.round(perc * 100.0) / 100.0;
         }
         return results;
     }
 
-    // Method to assign grade based on image reference
+    // Method to assign grade
     public static String[][] determineGrades(double[][] stats) {
         String[][] grades = new String[stats.length][1];
         for (int i = 0; i < stats.length; i++) {
             double p = stats[i][2];
-            if (p >= 80) grades[i][0] = "A";      // 80% and above
-            else if (p >= 70) grades[i][0] = "B"; // 70-79%
-            else if (p >= 60) grades[i][0] = "C"; // 60-69%
-            else if (p >= 50) grades[i][0] = "D"; // 50-59%
-            else if (p >= 40) grades[i][0] = "E"; // 40-49%
-            else grades[i][0] = "R";              // 39% and below
+            if (p >= 80) grades[i][0] = "A";      
+            else if (p >= 70) grades[i][0] = "B"; 
+            else if (p >= 60) grades[i][0] = "C"; 
+            else if (p >= 50) grades[i][0] = "D"; 
+            else if (p >= 40) grades[i][0] = "E";
+            else grades[i][0] = "R";              
         }
         return grades;
     }
 
     public static void displayScorecard(int[][] scores, double[][] stats, String[][] grades) {
         System.out.println("\nID | Phys | Chem | Math | Total | Avg | % | Grade");
-        System.out.println("-------------------------------------------------------");
-        for (int i = 0; i < scores.length; i++) {
+              for (int i = 0; i < scores.length; i++) {
             System.out.println((i + 1) + "  | " + 
                 scores[i][0] + "   | " + scores[i][1] + "   | " + scores[i][2] + "   | " + 
                 (int)stats[i][0] + "   | " + stats[i][1] + " | " + stats[i][2] + " | " + grades[i][0]);

@@ -6,13 +6,13 @@ public class RockPaperScissors {
         System.out.print("How many games would you like to play? ");
         int totalGames = sc.nextInt();
 
-        // 2D array to store results: [Game#][UserChoice, ComputerChoice, Winner]
+        // 2D array to store results
         String[][] gameHistory = new String[totalGames][3];
         int userWins = 0;
         int compWins = 0;
 
         for (int i = 0; i < totalGames; i++) {
-            System.out.println("\n--- Game " + (i + 1) + " ---");
+            
             System.out.print("Enter (Rock, Paper, or Scissors): ");
             String userChoice = sc.next();
             
@@ -33,7 +33,7 @@ public class RockPaperScissors {
         displayResults(gameHistory, stats);
     }
 
-    // Method 1: Get Computer Choice using Math.random
+    
     public static String getComputerChoice() {
         int rand = (int) (Math.random() * 3); // Generates 0, 1, or 2
         if (rand == 0) return "Rock";
@@ -41,7 +41,7 @@ public class RockPaperScissors {
         return "Scissors";
     }
 
-    // Method 2: Logic to find the winner
+    //  Logic to find the winner
     public static String findWinner(String user, String comp) {
         if (user.equalsIgnoreCase(comp)) return "Tie";
         
@@ -54,9 +54,9 @@ public class RockPaperScissors {
         return "Computer";
     }
 
-    // Method 3: Calculate stats and return as 2D String array
+    // Calculate stats and return as 2D String array
     public static String[][] calculateStats(int uWin, int cWin, int total) {
-        String[][] stats = new String[2][2]; // Rows: User, Computer | Cols: Total Wins, Percentage
+        String[][] stats = new String[2][2]; 
         
         double uPct = ((double) uWin / total) * 100;
         double cPct = ((double) cWin / total) * 100;
@@ -70,18 +70,16 @@ public class RockPaperScissors {
         return stats;
     }
 
-    // Method 4: Display tabular results
+    // Display tabular results
     public static void displayResults(String[][] history, String[][] stats) {
-        System.out.println("\n--- GAME HISTORY ---");
-        System.out.println("Game#\tUser\t\tCPU\t\tWinner");
-        System.out.println("----------------------------------------------");
+       
         for (int i = 0; i < history.length; i++) {
-            System.out.println((i + 1) + "\t" + history[i][0] + "\t\t" + history[i][1] + "\t\t" + history[i][2]);
+            System.out.println((i + 1) + "  " + history[i][0] + "  " + history[i][1] + "  " + history[i][2]);
         }
 
-        System.out.println("\n--- FINAL STATS ---");
+        
         System.out.println("Player\t\tWins\tPercentage");
-        System.out.println("------------------------------------");
+     
         System.out.println("User\t\t" + stats[0][0] + "\t" + stats[0][1]);
         System.out.println("Computer\t" + stats[1][0] + "\t" + stats[1][1]);
     }

@@ -13,12 +13,12 @@ public class VowelConsonantCounter {
     }
 
     public static String checkChar(char ch) {
-        // Convert to lowercase using ASCII (A is 65, a is 97, diff is 32)
+        // Convert to lowercase using ASCII 
         if (ch >= 65 && ch <= 90) {
             ch = (char) (ch + 32);
         }
 
-        if (ch >= 97 && ch <= 122) { // Is it a letter?
+        if (ch >= 97 && ch <= 122) { 
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
                 return "Vowel";
             }

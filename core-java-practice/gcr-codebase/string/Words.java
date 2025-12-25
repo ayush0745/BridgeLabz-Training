@@ -9,7 +9,7 @@ public class Words {
         String[] words = customSplit(text);
         String[][] wordData = getWordData(words);
         
-        // indices[0] = index of shortest, indices[1] = index of longest
+       
         int[] indices = findShortestLongest(wordData);
 
         System.out.println("Shortest word: " + wordData[indices[0]][0] + " (Length: " + wordData[indices[0]][1] + ")");

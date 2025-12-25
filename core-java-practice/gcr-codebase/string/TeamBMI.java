@@ -5,7 +5,7 @@ public class TeamBMI {
         Scanner sc = new Scanner(System.in);
         int teamSize = 10;
         
-        // Array to store weight (col 0) and height (col 1)
+        // Array to store weight and height 
         double[][] measurements = new double[teamSize][2];
 
         System.out.println("Enter data for " + teamSize + " team members:");
@@ -17,7 +17,7 @@ public class TeamBMI {
             measurements[i][1] = sc.nextDouble();
         }
 
-        // Generate the report using user-defined methods
+        // Generate the report
         String[][] bmiReport = processTeamData(measurements);
 
         // Display results
@@ -26,7 +26,7 @@ public class TeamBMI {
         sc.close();
     }
 
-    // Method 1: Logic to find BMI and Status for an individual
+    //  Logic to find BMI and Status for an individual
     public static String[] calculateIndividualBMI(double weight, double heightCm) {
         // Convert height cm to meters
         double heightM = heightCm / 100.0;
@@ -39,11 +39,11 @@ public class TeamBMI {
         else if (bmi <= 29.9) status = "Overweight";
         else status = "Obese";
 
-        // Return BMI and Status as strings (rounding BMI to 2 decimals)
+        // Return BMI and Status as strings 
         return new String[]{String.format("%.2f", bmi), status};
     }
 
-    // Method 2: Process the whole team and store in a 2D String array
+    //  Process the whole team and store in a 2D String array
     public static String[][] processTeamData(double[][] data) {
         String[][] report = new String[data.length][4];
 
@@ -51,7 +51,7 @@ public class TeamBMI {
             double weight = data[i][0];
             double height = data[i][1];
             
-            // Call the individual calculation method
+       
             String[] result = calculateIndividualBMI(weight, height);
 
             report[i][0] = String.valueOf(height);
@@ -62,11 +62,10 @@ public class TeamBMI {
         return report;
     }
 
-    // Method 3: Display the data in a simple tabular format
+    //  Display the data in a simple tabular format
     public static void displayReport(String[][] report) {
         System.out.println("\nHeight(cm)  Weight(kg)  BMI     Status");
-        System.out.println("----------------------------------------------");
-
+    
         for (int i = 0; i < report.length; i++) {
             System.out.println(report[i][0] + "       " + 
                                report[i][1] + "       " + 

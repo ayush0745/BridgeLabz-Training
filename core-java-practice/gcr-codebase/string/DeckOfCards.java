@@ -4,18 +4,17 @@ public class DeckOfCards {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Suits and Ranks defined as per instructions
+    
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         String[] ranks = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
-        // 1. Initialize the deck
+        // Initialize
         String[] deck = initializeDeck(suits, ranks);
         int n = deck.length;
 
         // 2. Shuffle the deck
         deck = shuffleDeck(deck, n);
 
-        // 3. Take player input and distribute
         System.out.print("Enter number of players: ");
         int x = sc.nextInt();
         System.out.print("Enter number of cards per player: ");
@@ -23,7 +22,7 @@ public class DeckOfCards {
 
         String[][] players = distributeCards(deck, x, cardsPerPlayer);
 
-        // 4. Print results
+        //  Print results
         if (players != null) {
             printPlayers(players);
         } else {
@@ -47,13 +46,13 @@ public class DeckOfCards {
         return deck;
     }
 
-    // Method to Shuffle the deck using random swapping
+    
     public static String[] shuffleDeck(String[] deck, int n) {
         for (int i = 0; i < n; i++) {
-            // Generate a random index between i and n
+           
             int randomCardNumber = i + (int) (Math.random() * (n - i));
 
-            // Swap the current card with the random card
+           
             String temp = deck[i];
             deck[i] = deck[randomCardNumber];
             deck[randomCardNumber] = temp;
@@ -61,9 +60,9 @@ public class DeckOfCards {
         return deck;
     }
 
-    // Method to distribute cards to x players
+
     public static String[][] distributeCards(String[] deck, int x, int nPerPlayer) {
-        // Check if total cards needed exceed deck size
+       
         if (x * nPerPlayer > deck.length) {
             return null;
         }
@@ -79,9 +78,9 @@ public class DeckOfCards {
         return players;
     }
 
-    // Method to Print players and their cards
+    
     public static void printPlayers(String[][] players) {
-        System.out.println("\n--- Player Card Distribution ---");
+        System.out.println(" Player Card Distribution");
         for (int i = 0; i < players.length; i++) {
             System.out.print("Player " + (i + 1) + ": ");
             for (int j = 0; j < players[i].length; j++) {

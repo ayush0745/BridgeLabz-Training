@@ -4,17 +4,17 @@ public class LowerCaseComparison {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // 1. Take user input (nextLine captures spaces)
+        // Take user input
         System.out.println("Enter the text to convert to lowercase:");
         String userInput = sc.nextLine();
 
-        // 2. Get Lowercase using the built-in String method
+        // Get Lowercase using the built-in String method
         String builtInLower = userInput.toLowerCase();
 
-        // 3. Get Lowercase using our custom ASCII method
+        // Get Lowercase using our custom 
         String customLower = manualToLower(userInput);
 
-        // 4. Compare the two results using our custom comparison method
+        // Compare the two results 
         boolean match = compareStrings(builtInLower, customLower);
 
         // 5. Display results
@@ -26,18 +26,18 @@ public class LowerCaseComparison {
         sc.close();
     }
 
-    // Method to convert uppercase to lowercase using ASCII math
+    // Method to convert uppercase to lowercase 
     public static String manualToLower(String text) {
         String result = "";
         for (int i = 0; i < text.length(); i++) {
             char ch = text.charAt(i);
             
-            // Check if character is Uppercase ('A' is 65, 'Z' is 90)
+         
             if (ch >= 65 && ch <= 90) {
-                // Add 32 to move from Uppercase range to Lowercase range
+                
                 result += (char) (ch + 32);
             } else {
-                // If it's already lowercase or a symbol, keep it as is
+              
                 result += ch;
             }
         }

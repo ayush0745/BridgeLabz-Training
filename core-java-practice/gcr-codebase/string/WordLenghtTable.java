@@ -6,23 +6,23 @@ public class WordLengthTable {
         System.out.println("Enter a sentence:");
         String input = sc.nextLine();
 
-        // 1. Split text into words manually
+        // Split text into words manually
         String[] words = customSplit(input);
 
-        // 2. Create 2D array with word and length
+        
         String[][] wordData = getWordData(words);
 
         // 3. Display in tabular format
-        System.out.println("\n--- Word Analysis Table ---");
+        System.out.println("\nWord Analysis Table");
         System.out.println("Word\t\tLength");
-        System.out.println("---------------------------");
+       
 
         for (int i = 0; i < wordData.length; i++) {
             String word = wordData[i][0];
             // Convert String length back to Integer for display
             int length = Integer.parseInt(wordData[i][1]);
             
-            System.out.println(word + "\t\t" + length);
+            System.out.println(word + "  " + length);
         }
     }
 
@@ -68,7 +68,7 @@ public class WordLengthTable {
         return words;
     }
 
-    // Method to generate 2D array: [Word][Length as String]
+  
     public static String[][] getWordData(String[] words) {
         String[][] data = new String[words.length][2];
         for (int i = 0; i < words.length; i++) {

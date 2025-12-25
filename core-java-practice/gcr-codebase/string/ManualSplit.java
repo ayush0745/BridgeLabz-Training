@@ -6,13 +6,13 @@ public class ManualSplit {
         System.out.println("Enter a sentence:");
         String text = sc.nextLine();
 
-        // 1. Built-in split
+        // Built-in split
         String[] builtInWords = text.split(" ");
 
-        // 2. Custom split
+        // Custom split
         String[] customWords = customSplit(text);
 
-        // 3. Compare and Display
+        // Compare and Display
         boolean match = compareArrays(builtInWords, customWords);
         
         System.out.println("\nResults match: " + match);
@@ -22,7 +22,7 @@ public class ManualSplit {
         }
     }
 
-    // Helper method to find length without .length()
+    //method to find length without .length()
     public static int findLength(String s) {
         int count = 0;
         try {
@@ -44,16 +44,16 @@ public class ManualSplit {
         int wordIndex = 0;
         String currentWord = "";
 
-        // Loop through and build words character by character
+        
         for (int i = 0; i < len; i++) {
             if (text.charAt(i) == ' ') {
                 words[wordIndex++] = currentWord;
-                currentWord = ""; // reset for next word
+                currentWord = "";
             } else {
                 currentWord += text.charAt(i);
             }
         }
-        words[wordIndex] = currentWord; // Add the last word
+        words[wordIndex] = currentWord; 
         return words;
     }
 

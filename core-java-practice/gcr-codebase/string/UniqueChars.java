@@ -6,13 +6,13 @@ public class UniqueChars {
         System.out.print("Enter a string: ");
         String input = sc.next();
 
-        // 1. Get length manually
+        // Get length manually
         int len = findLength(input);
 
-        // 2. Extract unique characters
+        //Extract unique characters
         char[] uniqueResult = findUniqueChars(input, len);
 
-        // 3. Display result
+        //Display result
         System.out.print("Unique characters: ");
         for (char c : uniqueResult) {
             System.out.print(c + " ");
@@ -22,7 +22,7 @@ public class UniqueChars {
         sc.close();
     }
 
-    // Method to find length without .length() method
+   
     public static int findLength(String s) {
         int count = 0;
         try {
@@ -44,7 +44,7 @@ public class UniqueChars {
             char currentChar = str.charAt(i);
             boolean isDuplicate = false;
 
-            // Inner loop: check if currentChar appeared in the string before index i
+            // Inner loop check if currentChar appeared in the string before index i
             for (int j = 0; j < i; j++) {
                 if (str.charAt(j) == currentChar) {
                     isDuplicate = true;

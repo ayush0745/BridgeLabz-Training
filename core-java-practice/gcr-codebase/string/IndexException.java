@@ -7,16 +7,14 @@ public class IndexExceptionDemo {
         System.out.print("Enter some text: ");
         String text = sc.nextLine();
 
-        // 1. Generate Exception (will crash the program)
-        // generateIndexException(text);
-
-        // 2. Handle Exception (safe)
+ 
+        // Handle Exception (safe)
         handleIndexException(text);
     }
 
     public static void generateIndexException(String text) {
         System.out.println("Crashing with index out of bounds...");
-        // Using length of string as index (which is always 1 out of bounds)
+      
         System.out.println(text.charAt(text.length())); 
     }
 

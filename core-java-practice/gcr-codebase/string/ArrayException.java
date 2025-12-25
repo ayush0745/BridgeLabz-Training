@@ -4,7 +4,7 @@ public class ArrayException {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // 1. Define an array and take user input
+        //  Define an array 
         System.out.print("How many names do you want to enter? ");
         int size = sc.nextInt();
         String[] names = new String[size];
@@ -14,23 +14,20 @@ public class ArrayException {
             names[i] = sc.next();
         }
 
-        // 2. Call the method that crashes the program
-        // NOTE: To see the second method run, you must comment this out after testing.
-        System.out.println("\n--- Generating Exception (Program will stop) ---");
         generateException(names);
 
-        // 3. Call the method that handles the exception
-        System.out.println("\n--- Handling Exception (Program will continue) ---");
+        // Call the method that handles the exception
+        System.out.println(" Handling Exception ");
         handleException(names);
     }
 
-    // Method to generate the crash
+   
     public static void generateException(String[] names) {
         int badIndex = names.length + 5; 
         System.out.println("Accessing index " + badIndex + ": " + names[badIndex]);
     }
 
-    // Method to handle the crash safely
+   
     public static void handleException(String[] names) {
         try {
             int badIndex = names.length + 5;
