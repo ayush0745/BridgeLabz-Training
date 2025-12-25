@@ -42,7 +42,17 @@ BridgeLabz-Training/
 ### 21-12-2025 (Sunday):
 - solved two leetcode problems including NimGame(https://leetcode.com/problems/nim-game/) and Excel Sheet Column Number(https://leetcode.com/problems/excel-sheet-column-number/)
 
+### 22-12-2025 (Monday)
+- solved string level 1 and level 2 and two leetcode problems reverse string(https://leetcode.com/problems/reverse-string/) and the length of last word(https://leetcode.com/problems/length-of-last-word/)
 
+### 23-12-2025 (Tuesday)
+- solved string level 3 problem, scenario based problem and  two leetcode problems binary search(https://leetcode.com/problems/binary-search/) and Valid Anagram(https://leetcode.com/problems/valid-anagram/)
+
+### 24-12-2025 (Wednesday)
+- solved problem by creating method level 1
+
+### 25-12-2025 (Thursday)
+- solved problem by creating method level 2 and level 3
 
 
 
