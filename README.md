@@ -46,14 +46,24 @@ BridgeLabz-Training/
 - solved string level 1 and level 2 and two leetcode problems reverse string(https://leetcode.com/problems/reverse-string/) and the length of last word(https://leetcode.com/problems/length-of-last-word/)
 
 ### 23-12-2025 (Tuesday)
-- solved string level 3 problem, scenario based problem and  two leetcode problems binary search(https://leetcode.com/problems/binary-search/) and Valid Anagram(https://leetcode.com/problems/valid-anagram/)
+- solved string level 3 problem
+- scenario based problem 
+-  two leetcode problems binary search(https://leetcode.com/problems/binary-search/) 
+- And Valid Anagram(https://leetcode.com/problems/valid-anagram/)
 
 ### 24-12-2025 (Wednesday)
 - solved problem by creating method level 1
 
 ### 25-12-2025 (Thursday)
 - solved problem by creating method level 2 and level 3
+- leetcode problem 
+- Delete the Middle Node of a Linked List(https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)
+- Remove Nth Node From End of List(https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
+### 26-12-2025 (Friday)
+- solved extra problem of string
+- solved leetcode problem 1. isomorphic strings 
+- 2. reverse vowels in a string
 
 
 
