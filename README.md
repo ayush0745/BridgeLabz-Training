@@ -65,6 +65,13 @@ BridgeLabz-Training/
 - solved leetcode problem 1. isomorphic strings 
 - 2. reverse vowels in a string
 
+### 27-12-2025 (Saturday)
+- solved some extra problem of string
+
+### 28-12-2025 (Sunday)
+- solved leetcode problem ransom note(https://leetcode.com/problems/ransom-note/)
+- Word Pattern(https://leetcode.com/problems/word-pattern/)
+
 
 
 
