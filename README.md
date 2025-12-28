@@ -11,7 +11,13 @@ BridgeLabz-Training/
 |   |   +-- control-flow/
 |   |   |
 |   |   +-- arrays/
-|   |
+|   |	|
+|	|	+-- extras/
+|	|	|
+|	|	+-- methods/
+|	|	|
+|	|	+-- strings/
+|	|
 |   +-- leet-code-codebase/
 |   |
 |   +-- scenario-based/
@@ -72,8 +78,9 @@ BridgeLabz-Training/
 - solved leetcode problem ransom note(https://leetcode.com/problems/ransom-note/)
 - Word Pattern(https://leetcode.com/problems/word-pattern/)
 
-
-
+### 29-12-2025 (Monday)
+- solved some extra logic building problem 
+- solved some date time problem using java inbuilt library
 
 
 
