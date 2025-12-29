@@ -56,7 +56,7 @@ public class StudentGrades {
             }
         }
 
-        System.out.println("output")
+        System.out.println("output");
         for (int i = 0; i < num; i++) {
             
             System.out.println((i + 1) + " , " + 
