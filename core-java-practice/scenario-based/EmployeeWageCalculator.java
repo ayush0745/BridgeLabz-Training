@@ -24,10 +24,10 @@ public class EmployeeWageCalculator {
             int empHrs = 0;
 
             switch (empCheck) { // UC 4: Switch Case
-                case 1: // Part-time [cite: 24]
+                case 1: // Part-time 
                     empHrs = 8; // Assume Part-time Hour is 8 
                     break;
-                case 2: // Full-time [cite: 19]
+                case 2: // Full-time
                     empHrs = 8; // Assume Full Day Hour is 8 
                     break;
                 default:
