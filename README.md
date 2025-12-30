@@ -24,6 +24,13 @@ BridgeLabz-Training/
 |   |
 |   +-- scenario-based/
 |
+|
++-- oops-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- class-and-object/
+|
 +-- README.md
  ```
   
@@ -86,6 +93,13 @@ BridgeLabz-Training/
 - solved scenario based problem
 - created new branch named scenario based
 - solved leetcode roman to integer(https://leetcode.com/problems/roman-to-integer/)
+
+  ### 30-12-2025 (Tuesday)
+  - solved oops practice level 1 and level 2 problems
+  - solved scnario bases snake ladder problem
+  - solved leetcode roman to integer(https://leetcode.com/problems/roman-to-integer/)
+  - solved leetcode Climbing Stairs(https://leetcode.com/problems/climbing-stairs/)
+
 
 
 
