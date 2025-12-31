@@ -102,7 +102,8 @@ BridgeLabz-Training/
 ### 31-12-2025 (Wednesday)
 - solved problem by using access modifiers and subclass
 - created review branch
-
+- solved leetcode problem contains duplicate(https://leetcode.com/problems/contains-duplicate/)
+- solved zigzag conversion(https://leetcode.com/problems/zigzag-conversion/)
 
 
 
