@@ -93,12 +93,15 @@ BridgeLabz-Training/
 - solved scenario based problem
 - created new branch named scenario based
 
- ### 30-12-2025 (Tuesday)
- - solved oops practice level 1 and level 2 problems
- - solved scnario bases snake ladder problem
- - solved leetcode roman to integer(https://leetcode.com/problems/roman-to-integer/)
- - solved leetcode Climbing Stairs(https://leetcode.com/problems/climbing-stairs/)
+### 30-12-2025 (Tuesday)
+- solved oops practice level 1 and level 2 problems
+- solved scnario bases snake ladder problem
+- solved leetcode roman to integer(https://leetcode.com/problems/roman-to-integer/)
+- solved leetcode Climbing Stairs(https://leetcode.com/problems/climbing-stairs/)
 
+### 31-12-2025 (Wednesday)
+- solved problem by using access modifiers and subclass
+- created review branch
 
 
 
