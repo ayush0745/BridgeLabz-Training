@@ -11,14 +11,15 @@ public class RotationalStringApp {
 		else {
 			System.out.println(" not rotational");
 		}
-		
+	
 	}
 	public static boolean rotationcheck( String str1, String str2) {
 		//usercase 1 length check
 		if( str1.length() != str2.length()) return false;
-		//concat string 1 to string 2
-		String result = str1.concat(str2);
+		// uc2 concat string 1 to string 2
+		String result = str1.concat(str1);
 		
+		//usercase 3 rotation check
 		if(result.contains(str2)) return true;
 		
 		return false;
