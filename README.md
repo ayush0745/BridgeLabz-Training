@@ -105,8 +105,10 @@ BridgeLabz-Training/
 - solved leetcode problem contains duplicate(https://leetcode.com/problems/contains-duplicate/)
 - solved zigzag conversion(https://leetcode.com/problems/zigzag-conversion/)
 
-
-
+### 01-01-2026 (Thursday)
+- solved problem using this, static, final keyword
+- solved leetcode problem crawler log folder(https://leetcode.com/problems/crawler-log-folder/)
+- baseball game(https://leetcode.com/problems/baseball-game/)
 
 
 
