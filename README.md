@@ -110,5 +110,12 @@ BridgeLabz-Training/
 - solved leetcode problem crawler log folder(https://leetcode.com/problems/crawler-log-folder/)
 - baseball game(https://leetcode.com/problems/baseball-game/)
 
+### 02-01-2026 (Friday)
+- object-oriented-design-principles
+
+### 03-01-2026 (Saturday)
+- solved problems using single inheritance
+- multilevel, Hierarchical and hybrid inheritance
+
 
 
