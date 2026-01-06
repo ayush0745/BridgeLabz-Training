@@ -35,7 +35,9 @@ BridgeLabz-Training/
  ```
   
  # BridgeLabz-Training
+
 ### Week 1: Getting Started with basic problem solving using java
+
 ### 16-12-2025 (Tuesday):
 - Established the foundational project structure by creating the repository and adding the local folder.
 
@@ -53,6 +55,8 @@ BridgeLabz-Training/
 - Solved leetcode add Digits (https://leetcode.com/problems/add-digits/) and palindrome number (https://leetcode.com/problems/palindrome-number/)
 - Solved two scnarario based problem incuding CoffeeCounter and FitnessTracker
 - Solved arrays level 1 and level 2 problems ( 1D Arrays and 2D Arrays )
+
+### Week 2:getting started with strings
 
 ### 21-12-2025 (Sunday):
 - solved two leetcode problems including NimGame(https://leetcode.com/problems/nim-game/) and Excel Sheet Column Number(https://leetcode.com/problems/excel-sheet-column-number/)
@@ -83,6 +87,8 @@ BridgeLabz-Training/
 ### 27-12-2025 (Saturday)
 - solved some extra problem of string
 
+### Week 3: Inbulit Libraries and oops
+
 ### 28-12-2025 (Sunday)
 - solved leetcode problem ransom note(https://leetcode.com/problems/ransom-note/)
 - Word Pattern(https://leetcode.com/problems/word-pattern/)
@@ -95,27 +101,53 @@ BridgeLabz-Training/
 
 ### 30-12-2025 (Tuesday)
 - solved oops practice level 1 and level 2 problems
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/class-and-object)
 - solved scnario bases snake ladder problem
 - solved leetcode roman to integer(https://leetcode.com/problems/roman-to-integer/)
 - solved leetcode Climbing Stairs(https://leetcode.com/problems/climbing-stairs/)
 
 ### 31-12-2025 (Wednesday)
 - solved problem by using access modifiers and subclass
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/constructor-and-access-modifiers)
 - created review branch
 - solved leetcode problem contains duplicate(https://leetcode.com/problems/contains-duplicate/)
 - solved zigzag conversion(https://leetcode.com/problems/zigzag-conversion/)
 
 ### 01-01-2026 (Thursday)
 - solved problem using this, static, final keyword
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/this-final-static-keywords)
 - solved leetcode problem crawler log folder(https://leetcode.com/problems/crawler-log-folder/)
 - baseball game(https://leetcode.com/problems/baseball-game/)
 
 ### 02-01-2026 (Friday)
 - object-oriented-design-principles
+- https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/object-oriented-design-principles
 
 ### 03-01-2026 (Saturday)
 - solved problems using single inheritance
 - multilevel, Hierarchical and hybrid inheritance
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/inheritance)
+-solved leetcode problem Backspace String Compare(https://leetcode.com/problems/backspace-string-compare/)
 
+### Week 4: oops deep dive
 
+### 04-01-2026 (Sunday)
+- solved leetcode problem Removing stars from a String(https://leetcode.com/problems/removing-stars-from-a-string/)
+
+### 05-06-2026 (Monday)
+- solved leetcode problem Removing All Adjacent Duplicates in string (https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
+- RemovingAllAdjacent Duplicates in string 2 (https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)
+- Number of Pairs of Interchangeable Rectangles(https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/)
+- Senario based problem using exception handling
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+- problem using encapsultion,abstraction
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
+### 06-01-2026 (Tuesday)
+- solved leetcode problem Count Nice Pairs in an Array(https://leetcode.com/problems/count-nice-pairs-in-an-array/)
+- Number of Good Pairs(https://leetcode.com/problems/number-of-good-pairs/)
+- problem using abstraction ,interface and polymorphism
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/gcr-codebase/encapsulation-abstraction-and-interfaces)
+- scenario based 4 problem
+- (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
 
