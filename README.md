@@ -154,3 +154,4 @@ BridgeLabz-Training/
 ### 07-01-2026 (Wednesday)
 - solved 2 leetcode problem minimize string length(https://leetcode.com/problems/minimize-string-length/)
 - report spam message(https://leetcode.com/problems/report-spam-message/)
+- solved scenario based problem cab booking app and banking app(https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
