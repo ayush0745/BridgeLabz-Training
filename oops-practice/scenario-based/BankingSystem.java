@@ -1,143 +1,240 @@
 import java.util.*;
 
-// ======================= CUSTOM EXCEPTION =======================
+// -------------------- Custom Exception --------------------
 class InsufficientBalanceException extends Exception {
     public InsufficientBalanceException(String message) {
         super(message);
     }
 }
 
-// ======================= BANK SERVICE (ABSTRACTION) =======================
-interface BankService {
-    void deposit(double amount);
-    void withdraw(double amount) throws InsufficientBalanceException;
-    double calculateInterest();
-    double getBalance();
-}
-
-// ======================= ACCOUNT (BASE CLASS) =======================
-abstract class Account implements BankService {
+// -------------------- Abstract Account --------------------
+abstract class Account {
     protected int accountNumber;
     protected String holderName;
     protected double balance;
-    protected List<String> transactionHistory = new ArrayList<>();
+    protected List<String> transactions = new ArrayList<>();
 
     public Account(int accountNumber, String holderName, double balance) {
         this.accountNumber = accountNumber;
         this.holderName = holderName;
         this.balance = balance;
+        transactions.add("Account created with balance: " + balance);
     }
 
-    // synchronized for thread safety
-    public synchronized void deposit(double amount) {
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
         balance += amount;
-        transactionHistory.add("Deposited: ₹" + amount);
+        transactions.add("Deposited: " + amount);
     }
 
-    public synchronized void withdraw(double amount) throws InsufficientBalanceException {
+    public void withdraw(double amount) throws InsufficientBalanceException {
         if (amount > balance) {
             throw new InsufficientBalanceException("Insufficient balance!");
         }
         balance -= amount;
-        transactionHistory.add("Withdrawn: ₹" + amount);
+        transactions.add("Withdrawn: " + amount);
     }
 
-    public synchronized double getBalance() {
-        return balance;
+    public void printTransactions() {
+        System.out.println("Transaction History:");
+        for (String t : transactions) {
+            System.out.println("- " + t);
+        }
     }
 
-    public List<String> getTransactionHistory() {
-        return transactionHistory;
-    }
+    public abstract double calculateInterest();
 }
 
-// ======================= SAVINGS ACCOUNT =======================
+// -------------------- Savings Account --------------------
 class SavingsAccount extends Account {
 
     public SavingsAccount(int accNo, String name, double balance) {
         super(accNo, name, balance);
     }
 
-    // Polymorphism
+    @Override
     public double calculateInterest() {
-        return balance * 0.04;
+        return balance * 0.04; // 4% interest
     }
 }
 
-// ======================= CURRENT ACCOUNT =======================
+// -------------------- Current Account --------------------
 class CurrentAccount extends Account {
 
     public CurrentAccount(int accNo, String name, double balance) {
         super(accNo, name, balance);
     }
 
-    // Polymorphism
+    @Override
     public double calculateInterest() {
-        return balance * 0.01;
+        return balance * 0.01; // 1% interest
     }
 }
 
-// ======================= FUND TRANSFER TASK (MULTITHREADING) =======================
-class TransferTask implements Runnable {
-    private Account from;
-    private Account to;
-    private double amount;
+// -------------------- Bank Service Interface --------------------
+interface BankService {
+    void createAccount();
+    void checkBalance();
+    void deposit();
+    void withdraw();
+    void transfer();
+    void showTransactions();
+}
 
-    public TransferTask(Account from, Account to, double amount) {
-        this.from = from;
-        this.to = to;
-        this.amount = amount;
+// -------------------- Bank Implementation --------------------
+class BankServiceImpl implements BankService {
+
+    private Map<Integer, Account> accounts = new HashMap<>();
+    private Scanner sc = new Scanner(System.in);
+
+    @Override
+    public void createAccount() {
+        System.out.print("Enter Account Number: ");
+        int accNo = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Enter Holder Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Initial Balance: ");
+        double balance = sc.nextDouble();
+
+        System.out.print("Account Type (1-Savings / 2-Current): ");
+        int type = sc.nextInt();
+
+        Account acc;
+        if (type == 1) {
+            acc = new SavingsAccount(accNo, name, balance);
+        } else {
+            acc = new CurrentAccount(accNo, name, balance);
+        }
+
+        accounts.put(accNo, acc);
+        System.out.println("Account Created Successfully!");
     }
 
-    public void run() {
-        synchronized (from) {
-            synchronized (to) {
-                try {
-                    from.withdraw(amount);
-                    to.deposit(amount);
-                    System.out.println(Thread.currentThread().getName() +
-                            " transferred ₹" + amount);
-                } catch (InsufficientBalanceException e) {
-                    System.out.println(e.getMessage());
-                }
+    @Override
+    public void checkBalance() {
+        Account acc = getAccount();
+        if (acc != null) {
+            System.out.println("Balance: " + acc.getBalance());
+            System.out.println("Interest: " + acc.calculateInterest());
+        }
+    }
+
+    @Override
+    public void deposit() {
+        Account acc = getAccount();
+        if (acc != null) {
+            System.out.print("Enter amount to deposit: ");
+            acc.deposit(sc.nextDouble());
+            System.out.println("Deposit Successful!");
+        }
+    }
+
+    @Override
+    public void withdraw() {
+        Account acc = getAccount();
+        if (acc != null) {
+            System.out.print("Enter amount to withdraw: ");
+            try {
+                acc.withdraw(sc.nextDouble());
+                System.out.println("Withdrawal Successful!");
+            } catch (InsufficientBalanceException e) {
+                System.out.println(e.getMessage());
             }
         }
     }
+
+    @Override
+    public void transfer() {
+        System.out.print("From Account Number: ");
+        int fromAcc = sc.nextInt();
+
+        System.out.print("To Account Number: ");
+        int toAcc = sc.nextInt();
+
+        System.out.print("Amount: ");
+        double amount = sc.nextDouble();
+
+        Account sender = accounts.get(fromAcc);
+        Account receiver = accounts.get(toAcc);
+
+        if (sender == null || receiver == null) {
+            System.out.println("Invalid account number!");
+            return;
+        }
+
+        try {
+            sender.withdraw(amount);
+            receiver.deposit(amount);
+            sender.transactions.add("Transferred " + amount + " to " + toAcc);
+            receiver.transactions.add("Received " + amount + " from " + fromAcc);
+            System.out.println("Transfer Successful!");
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Override
+    public void showTransactions() {
+        Account acc = getAccount();
+        if (acc != null) {
+            acc.printTransactions();
+        }
+    }
+
+    private Account getAccount() {
+        System.out.print("Enter Account Number: ");
+        int accNo = sc.nextInt();
+        Account acc = accounts.get(accNo);
+        if (acc == null) {
+            System.out.println("Account not found!");
+        }
+        return acc;
+    }
 }
 
-// ======================= MAIN APPLICATION =======================
+// -------------------- Main Class --------------------
 public class BankingSystem {
     public static void main(String[] args) {
 
-        Account savings = new SavingsAccount(101, "Ayush", 10000);
-        Account current = new CurrentAccount(201, "Company", 5000);
+        BankService bank = new BankServiceImpl();
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Initial Savings Balance: ₹" + savings.getBalance());
-        System.out.println("Initial Current Balance: ₹" + current.getBalance());
+        while (true) {
+            System.out.println("\n--- Online Banking System ---");
+            System.out.println("1. Create Account");
+            System.out.println("2. Check Balance");
+            System.out.println("3. Deposit");
+            System.out.println("4. Withdraw");
+            System.out.println("5. Fund Transfer");
+            System.out.println("6. Transaction History");
+            System.out.println("7. Exit");
 
-        // Multithreading: concurrent transfers
-        Thread t1 = new Thread(new TransferTask(savings, current, 2000), "Thread-1");
-        Thread t2 = new Thread(new TransferTask(savings, current, 3000), "Thread-2");
+            System.out.print("Choose option: ");
+            int choice = sc.nextInt();
 
-        t1.start();
-        t2.start();
-
-        try {
-            t1.join();
-            t2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("\nFinal Savings Balance: ₹" + savings.getBalance());
-        System.out.println("Final Current Balance: ₹" + current.getBalance());
-
-        System.out.println("\nSavings Interest: ₹" + savings.calculateInterest());
-        System.out.println("Current Interest: ₹" + current.calculateInterest());
-
-        System.out.println("\nSavings Transaction History:");
-        for (String tx : savings.getTransactionHistory()) {
-            System.out.println(tx);
+            switch (choice) {
+                case 1 -> bank.createAccount();
+                case 2 -> bank.checkBalance();
+                case 3 -> bank.deposit();
+                case 4 -> bank.withdraw();
+                case 5 -> bank.transfer();
+                case 6 -> bank.showTransactions();
+                case 7 -> {
+                    System.out.println("Thank you!");
+                    return;
+                }
+                default -> System.out.println("Invalid choice!");
+            }
         }
     }
 }
