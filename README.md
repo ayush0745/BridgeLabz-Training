@@ -134,7 +134,7 @@ BridgeLabz-Training/
 ### 04-01-2026 (Sunday)
 - solved leetcode problem Removing stars from a String(https://leetcode.com/problems/removing-stars-from-a-string/)
 
-### 05-06-2026 (Monday)
+### 05-01-2026 (Monday)
 - solved leetcode problem Removing All Adjacent Duplicates in string (https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
 - RemovingAllAdjacent Duplicates in string 2 (https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/)
 - Number of Pairs of Interchangeable Rectangles(https://leetcode.com/problems/number-of-pairs-of-interchangeable-rectangles/)
@@ -151,3 +151,6 @@ BridgeLabz-Training/
 - scenario based 4 problem
 - (https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
 
+### 07-01-2026 (Wednesday)
+- solved 2 leetcode problem minimize string length(https://leetcode.com/problems/minimize-string-length/)
+- report spam message(https://leetcode.com/problems/report-spam-message/)
