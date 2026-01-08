@@ -155,3 +155,7 @@ BridgeLabz-Training/
 - solved 2 leetcode problem minimize string length(https://leetcode.com/problems/minimize-string-length/)
 - report spam message(https://leetcode.com/problems/report-spam-message/)
 - solved scenario based problem cab booking app and banking app(https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+
+### 08-01-2026 (Thursday)
+- solved linked list problems(https://github.com/ayush0745/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/linked-list)
+- solved leetcode problem(https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/)
