@@ -159,3 +159,8 @@ BridgeLabz-Training/
 ### 08-01-2026 (Thursday)
 - solved linked list problems(https://github.com/ayush0745/BridgeLabz-Training/tree/dsa-practice/dsa-practice/gcr-codebase/linked-list)
 - solved leetcode problem(https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/)
+
+### 09-01-2026 (Friday)
+- solved 3 scenario based problem(https://github.com/ayush0745/BridgeLabz-Training/tree/oops-practice/oops-practice/scenario-based)
+- solved leetcode problem Divide Players Into Teams of Equal Skill(https://leetcode.com/problems/divide-players-into-teams-of-equal-skill/)
+- Minimum Moves to Equal Array Elements(https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)
