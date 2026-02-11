@@ -4,22 +4,21 @@ import java.time.format.DateTimeParseException;
 
 public class DateFormatter {
 
-    private static final DateTimeFormatter INPUT_FORMAT =
-            DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-    private static final DateTimeFormatter OUTPUT_FORMAT =
-            DateTimeFormatter.ofPattern("dd-MM-yyyy");
-
-    public String formatDate(String inputDate) {
-        if (inputDate == null) {
+    public String formatDate(String date) {
+        if (date == null) {
             throw new IllegalArgumentException("Date cannot be null");
         }
 
+        LocalDate parsedDate;
         try {
-            LocalDate date = LocalDate.parse(inputDate, INPUT_FORMAT);
-            return date.format(OUTPUT_FORMAT);
+            // Parse input in ISO format yyyy-MM-dd
+            parsedDate = LocalDate.parse(date);
         } catch (DateTimeParseException e) {
-            throw new IllegalArgumentException("Invalid date format");
+            throw new IllegalArgumentException("Invalid date: " + date, e);
         }
+
+        // Format to dd-MM-yyyy
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return parsedDate.format(formatter);
     }
 }
