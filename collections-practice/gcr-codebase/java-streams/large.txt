@@ -1,0 +1,5 @@
+INFO Server started
+WARNING Disk space low
+ERROR Unable to connect to database
+info request processed
+Error file not found
