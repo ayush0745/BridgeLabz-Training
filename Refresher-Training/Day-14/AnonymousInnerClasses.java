@@ -22,7 +22,7 @@ class Square extends Shape {
     }
 }
 
-public class Main {
+public class AnonymusInnerClasses{
 
     public static void main(String[] args) {
 
